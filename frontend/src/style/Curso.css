@@ -1,0 +1,151 @@
+html,
+body {
+    overflow: auto;
+    margin: 0 auto;
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Cursos.css */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    padding-top: 20px;
+    height: auto;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: white;
+    color: black;
+}
+
+.navigation-links {
+    display: flex;
+}
+
+.navigation-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+
+.navigation-links a:hover {
+    text-decoration: none;
+    background-color: #60ae7c;
+}
+
+.BemVindo {
+    margin: 0;
+    color: black;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 200px;
+    text-decoration: none;
+}
+
+.tabs a{
+    text-decoration: none;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    padding: 100px;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    width: 98%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    top: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 400px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    background: linear-gradient(1deg, #4ca2cd, #913ca8 60%);
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.info {
+    display: none;
+}
+
+.card:hover .info {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+    display: block;
+    text-align: center;
+}
+
+.info p {
+    display: block;
+}
+
+.certificate {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.slider-button.left {
+    left: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    font-size: 80px;
+    z-index: 99;
+}
+
+.slider-button.right {
+    right: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    font-size: 80px;
+    z-index: 99;
+}

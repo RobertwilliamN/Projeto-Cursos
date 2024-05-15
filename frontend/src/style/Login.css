@@ -1,0 +1,164 @@
+html,body {
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/teste.jpg');
+}
+
+.Login label {
+    display: flex;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 460px;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    background: linear-gradient(1deg, #4ca2cd, #913ca8 60%);
+    border: 1px solid transparent;
+    font-weight: 500;
+    overflow: hidden;
+    transition: height 0.5s, width 0.5s, border-color 0.5s;
+}
+
+
+.Login form:hover {
+    height: 530px;
+    width: 320px;
+    border: 1px solid #60ae7c;
+
+}
+
+.Login form:hover h1 {
+    font-size: 38px;
+    padding-left: 30px;
+}
+.Login form:hover p {
+    padding-left: 30px;
+}
+
+.Login form:hover .error {
+    display: block; 
+}
+
+.Login form:hover .FormInput input {
+    border: 1px solid green;
+}
+
+.Login button {
+    text-align: center;
+    background-color: #6af0af;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 270px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.5s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.Login a {
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: transform 0.1s ease;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    width: 270px;
+    height: 25px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+a:hover {
+    transform: translateY(-1px);
+    border: 1px solid #01c320;
+}
+
+button:hover {
+    background-color: #60ae7c ;
+    transform: translateY(-1px);
+  }
+
+.FormInput {
+    margin-bottom: 10px;
+    padding: 5px 0 5px;
+    font-weight: 300;
+    text-align: center;
+    width: 340px;
+    display: block;
+    justify-content: center;
+    
+  }
+
+  .FormInput input {
+    height: 35px;
+    width: 270px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.1s ease;
+    font-weight: 300;
+    text-align: left;
+    margin-right: 2px;
+  }
+
+  .FormInput h1 {
+    text-align: left;
+    padding-left: 30px;
+    display: block;
+  }
+  .FormInput p {
+    text-align: left;
+    display: block;
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+
+
+input:hover {
+    transform: translateY(-1px);
+    border: 1px solid black;
+}
+
+.Login form .error {
+    display: none; 
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.bxs-user-pin {
+    font-size: 20px;
+    padding-top: 10px;;
+    justify-content: center;
+    text-align: center;
+    max-width: 0px;
+}
+.bxs-lock-alt {
+    font-size: 20px;
+    padding-top: 10px;;
+    justify-content: center;
+    text-align: center;
+    max-width: 0px;
+}
