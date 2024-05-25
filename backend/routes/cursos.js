@@ -1,5 +1,7 @@
 import express from 'express'
 import { db } from "../db.js";
+import path from 'path';
+
 
 const router = express.Router();
 
@@ -35,7 +37,13 @@ router.get('/',(req, res) => {
         if (result.length === 0) {
         res.send('Nenhum curso encontrado para este usuário');
         } else {
-        res.send(result);
+          // const certificado = result[0].certificado;
+          // const certificadoPath = path.resolve('uploads') + '/' + certificado;
+          // res.setHeader('Content-Type', 'application/pdf');
+          /// res.sendFile(certificadoPath);
+          // res.setHeader('Content-Type', 'application/pdf')
+          // res.sendFile(result.certificado,{ root: __dirname })
+          res.send(result);
         }
     });
     } else {

@@ -7,7 +7,7 @@ import DeleteCursoRouter from './routes/delete.js'
 import UpdateRouter from './routes/update_cursos.js'
 import CreateRouter from './routes/add_curso.js'
 
-const port = 5000;
+const port = 8000;
 const app = express();
 app.use(express.json());
 app.use(cors());
