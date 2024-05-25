@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/login', { email: email_user, password: password_user });
+      const response = await axios.post('http://localhost:8000/login', { email: email_user, password: password_user });
       const token = response.data.token;
       const userId = response.data.userId;
 
@@ -32,7 +32,14 @@ function Login() {
   };
 
   return (
-    <div className='Login'>
+    <div className="video-container">
+      <video autoPlay muted loop className="background-video">
+            <source src="background.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+      </video>
+        <div className="content">
+    
+       <div className='Login'>
       <form onSubmit={handleSubmit}>
         <div className='FormInput'>
           <h1>Login</h1>
@@ -63,6 +70,9 @@ function Login() {
       </form>
       
     </div>
+    </div>
+    </div>
+    
   );
 }
 

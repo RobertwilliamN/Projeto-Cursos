@@ -1,12 +1,296 @@
 html,
 body {
     overflow: auto;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: black;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: black;
+    height: 50px;
+    border-bottom: 1px solid hsl(261deg 80% 48%);
+    box-shadow: 0px 1px 15px 1px hsl(261deg 80% 48%);
+}
+
+.navbar-button {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 340px;
+}
+
+.Button-adicionar,
+.Button-perfil,
+.Button-logout {
+    text-decoration: none;
+    padding: 16px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    background-color: hsl(261deg 80% 48%);
+    height: 15px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Button-adicionar:hover,
+.Button-perfil:hover,
+.Button-logout:hover {
+    background-color: hsl(261deg 80% 48%);
+    color: white;
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
-/* Cursos.css */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+.BemVindo {
+    margin: 0;
+    color: white;
+    transition: transform 0.3s ease;
+    width: 400px;
+    font-family: 'sans-serif';
+}
+
+.BemVindo:hover {
+    transform: translateY(-1px);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Finalizado parte do navbar*/
+
+
+/* FILTROS */
+
+.filtro-menu {
+    height: 60px;
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+.Button-filtro {
+    padding: 17px 40px;
+    border-radius: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    height: 50px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.Button-filtro:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: white;
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+
+/* Slide Y */
+.slider {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    padding-top: 90px;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border: none;
+    text-decoration: none;
+}
+
+.slider a {
+    border: none;
+    height: 300px;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 400px;
+    width: 320px;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid white;
+    backdrop-filter: blur(30px);
+    text-align: center;
+    transition: transform 0.5s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.card h1 {
+    color: white;
+    font-family: 'Arial Narrow';
+    margin-top: 50px;
+    transition: margin-top 0.5s ease;
+    max-height: 150px ;
+}
+
+.card:hover h1 {
+    margin-top: 20px;
+    
+}
+
+.card h2 {
+    color: rgb(93 24 220);
+    font-family: 'Arial Narrow';
+    margin: 0;
+    font-size: 30px;
+}
+
+.card h3 {
+    color: #89ffc6;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Arial Narrow';
+
+}
+
+.card-header {
+    color: white;
+    margin-right: 165px;
+}
+
+.card:hover {
+    transform: translateY(-0.4rem);
+    border: 1px solid rgb(93 24 220);
+    height: 430px;
+    box-shadow: 0px 0px 40px 1px rgb(93 24 220);
+
+}
+
+.card:hover .editar-apagar {
+    display: block;
+    text-decoration: none;
+    justify-items: center;
+    text-align: center;
+}
+
+.editar-apagar {
+    display: none;
+}
+
+.editar,
+.acessar,
+.apagar {
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-left: 8px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 13px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+
+.editar:hover,
+.acessar:hover {
+    background-color: hsl(261deg 80% 48%);
+    color: white;
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+.acessar:hover {
+    background-color: rgb(64, 192, 87);
+    color: white;
+    box-shadow: rgb(64, 192, 87) 0px 7px 29px 0px;
+}
+
+.apagar:hover {
+    background-color: #e52441;
+    color: white;
+    box-shadow: #e52441 0px 7px 29px 0px;
+}
+
+.info {
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.info a {
+    font-style: normal;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    border: 2px solid #28242f;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    margin-left: 5px;
+    height: 25px;
+    padding: 6px;
+    padding-top: 15px;
+}
+
+.info a:hover {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-clip: text;
+    border-color: white;
+}
+
+
 .slider-container {
     width: 100%;
     height: 100vh;
@@ -17,135 +301,58 @@ body {
     align-items: center;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 60px;
-    background-color: white;
-    color: black;
-}
-
-.navigation-links {
-    display: flex;
-}
-
-.navigation-links a {
-    margin-right: 10px;
-    text-decoration: none;
-    padding: 15px;
-    margin-left: 20px;
-}
-
-
-.navigation-links a:hover {
-    text-decoration: none;
-    background-color: #60ae7c;
-}
-
-.BemVindo {
-    margin: 0;
-    color: black;
-}
-
-.tabs {
-    display: flex;
-    justify-content: space-between;
-    padding: 120px 200px;
-    text-decoration: none;
-}
-
-.tabs a{
-    text-decoration: none;
-}
-
-.slider {
-    display: flex;
-    gap: 20px;
-    padding: 100px;
-    overflow-x: hidden;
-    z-index: 1;
-    position: relative;
-    width: 98%;
-}
-
-.card {
-    border: 1px solid #ccc;
-    top: 50%;
-    border-radius: 10px;
-    padding: 10px;
-    min-width: 400px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    flex-direction: column;
-    background: linear-gradient(1deg, #4ca2cd, #913ca8 60%);
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.info {
-    display: none;
-}
-
-.card:hover .info {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.card h3 {
-    margin-top: 0;
-    display: block;
-    text-align: center;
-}
-
-.info p {
-    display: block;
-}
-
-.certificate {
-    width: 100%;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-}
 
 .slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
+    position: relative;
+    top: 5%;
+    background: white;
     border: none;
     font-size: 24px;
+    display: block;
     cursor: pointer;
     color: #333;
+    height: 200px;
 }
 
 .slider-button.left {
-    left: 20px;
-    text-align: center;
-    justify-content: center;
-    margin-top: 10px;
+    left: 15px;
     background-color: transparent;
-    border: 1px solid white;
+    border: none;
     position: absolute;
-    font-size: 80px;
+    font-size: 100px;
+    height: 390px;
+    color: white;
+    margin-top: 95px;
+    border-radius: 15px;
     z-index: 99;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
 }
 
 .slider-button.right {
-    right: 20px;
-    text-align: center;
-    justify-content: center;
-    margin-top: 10px;
+    right: 15px;
     background-color: transparent;
-    border: 1px solid white;
+    border: none;
     position: absolute;
-    font-size: 80px;
+    font-size: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 390px;
+    margin-top: 95px;
+    color: white;
     z-index: 99;
+    transition: transform 0.5s ease;
+}
+
+.slider-button.right:hover {
+    border: 1px solid white;
+    box-shadow: rgba(0, 255, 117, 0.30) 0px 7px 29px 0px;
+    transform: translateY(-1px);
+}
+
+.slider-button.left:hover {
+    border: 1px solid white;
+    box-shadow: rgba(0, 255, 117, 0.30) 0px 7px 29px 0px;
+    transform: translateY(-1px);
 }
